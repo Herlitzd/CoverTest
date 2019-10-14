@@ -2,8 +2,8 @@ language: csharp
 mono: none
 dotnet: 2.1.502
 script:
- - dotnet tool install -g coveralls.net --version 1.0.0
+ - dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
  - dotnet restore
  - dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
- - csmacnz.coveralls -i ./CoverTest.Tests/coverage.opencover.xml  --repoToken %COVERALLS_REPO_TOKEN% --opencover
+ - ./tools/csmacnz.Coveralls -i ./CoverTest.Tests/coverage.opencover.xml  --repoToken %COVERALLS_REPO_TOKEN% --opencover
 
