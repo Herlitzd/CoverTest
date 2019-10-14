@@ -5,5 +5,5 @@ script:
  - dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
  - dotnet restore
  - dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
- - ./tools/csmacnz.Coveralls -i ./CoverTest.Tests/coverage.opencover.xml  --repoToken $COVERALLS_REPO_TOKEN --opencover --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitMessage $TRAVIS_COMMIT_MESSAGE --jobId $TRAVIS_BUILD_ID
+ - ./tools/csmacnz.Coveralls -i ./CoverTest.Tests/coverage.opencover.xml  --repoToken $COVERALLS_REPO_TOKEN --opencover --commitId $TRAVIS_COMMIT --commitBranch $TRAVIS_BRANCH --commitMessage $TRAVIS_COMMIT_MESSAGE --jobId $TRAVIS_BUILD_NUMBER --useRelativePaths
 
