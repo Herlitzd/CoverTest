@@ -3,3 +3,4 @@
 **/obj/
 **/TestResults/**
 **/coverage.json
+**/tools/**
