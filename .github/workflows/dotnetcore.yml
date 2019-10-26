@@ -18,9 +18,9 @@ jobs:
     - name: add covertool
       run: dotnet tool install coveralls.net --version 1.0.0 --tool-path tools
     - name: test
-      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+      run: dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=lcov
     - name: Coveralls GitHub Action
       uses: coverallsapp/github-action@v1.0.1
       with:
         github-token: ${{ secrets.github_token }}
-        path-to-lcov: ./CoverTest.Tests/coverage.opencover.xml
+        path-to-lcov: ./CoverTest.Tests/coverage.info
